@@ -3,7 +3,7 @@
     <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-            <h2>Services</h2>
+            {{-- <h2>Services</h2> --}}
             <p>Veritatis et dolores facere numquam et praesentium</p>
         </header>
 

@@ -44,15 +44,26 @@
             color: #ffffff;
         }
 
-        /* .cb1:hover {
-                background: #717ef3;
-            }
+        .hero .btn-get-started:hover {
+            margin-top: 30px;
+            line-height: 0;
+            padding: 15px 40px;
+            border-radius: 4px;
+            transition: 0.5s;
+            color: #fff;
+            background: #012970;
+            box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+        }
 
-            .cb1:hover i,
-            .cb1:hover p,
-            .cb1:hover span {
-                color: #ffffff;
-            } */
+        /* .cb1:hover {
+                            background: #717ef3;
+                        }
+
+                        .cb1:hover i,
+                        .cb1:hover p,
+                        .cb1:hover span {
+                            color: #ffffff;
+                        } */
     </style>
 @endsection
 
@@ -61,13 +72,15 @@
     @include('frontend._partials.about')
     <!-- End About Section -->
 
+    <!-- ======= Pricing Section ======= -->
+    @include('frontend._partials.pricing')
+    <!-- End Pricing Section -->
+
     <!-- ======= Counts Section ======= -->
     @include('frontend._partials.counts')
     <!-- End Counts Section -->
 
-    <!-- ======= Pricing Section ======= -->
-    @include('frontend._partials.pricing')
-    <!-- End Pricing Section -->
+
 
     <!-- ======= Services Section ======= -->
     {{-- @include('frontend._partials.services') --}}
