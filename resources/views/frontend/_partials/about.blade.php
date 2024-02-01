@@ -6,20 +6,22 @@
             <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
                 <div class="content">
                     <h3>Who We Are</h3>
-                    <h2>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti
-                        reprehenderit.</h2>
+                    <h2>Your Trusted Partner in Building Reputable Online Presences. Experience, Integrity, Excellence
+                    </h2>
                     <p>
-                        Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor
-                        consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est
-                        corrupti.
+                        Welcome to <b>Your Company Name</b>, where we specialize in delivering authentic Trustpilot
+                        review
+                        services. With a commitment to integrity and years of expertise, we're your dedicated partner in
+                        enhancing online credibility. Explore a journey with us that combines experience,
+                        trustworthiness, and excellence in every review we provide.
                     </p>
-                    <div class="text-center text-lg-start">
+                    {{-- <div class="text-center text-lg-start">
                         <a href="#"
                             class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                             <span>Read More</span>
                             <i class="bi bi-arrow-right"></i>
                         </a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
 
