@@ -1,7 +1,7 @@
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
 
-    <div class="footer-newsletter">
+    {{-- <div class="footer-newsletter">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12 text-center">
@@ -15,14 +15,14 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="footer-top">
+    {{-- <div class="footer-top">
         <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-12 footer-info">
                     <a href="/" class="logo d-flex align-items-center">
-                        <img src="assets/img/logo.png" alt="">
+                        <img src="" alt="">
                         <span>Logo</span>
                     </a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laudantium unde facilis, aliquam
@@ -35,14 +35,12 @@
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-6 footer-links">
+                <div class="col-lg-3 col-6 footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="/">Home</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#pricing">Pricing</a></li>
                     </ul>
                 </div>
 
@@ -71,7 +69,7 @@
 
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="container">
         <div class="copyright">
