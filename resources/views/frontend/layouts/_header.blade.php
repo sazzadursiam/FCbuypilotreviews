@@ -3,8 +3,8 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
         <a href="/" class="logo d-flex align-items-center">
-            <img src="assets/img/logo.png" alt="">
-            <span>Logo</span>
+            <img src="{{ asset('our_assets/assets/img/favicon.png') }}" alt="">
+            {{-- <span>Logo</span> --}}
         </a>
 
         <nav id="navbar" class="navbar">
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                <img src="{{ asset('our_assets/assets/img/hero-img.png') }}" class="img-fluid" alt="">
+                <img src="{{ asset('our_assets/assets/img/hero___1.png') }}" class="img-fluid" alt="">
             </div>
         </div>
     </div>
