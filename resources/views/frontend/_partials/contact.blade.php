@@ -23,7 +23,7 @@
                         <div class="info-box">
                             <i class="bi bi-telephone"></i>
                             <h3>Call Us</h3>
-                            <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                            <p>919988971816<br>919988971816</p>
                         </div>
                     </div>
                     <div class="col-md-3">
