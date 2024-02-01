@@ -11,8 +11,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="{{ asset('our_assets/assets/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('our_assets/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -32,6 +32,7 @@
     <link href="{{ asset('our_assets/assets/css/style.css') }}" rel="stylesheet">
 
     <!-- ====Bootstrap v5.3.2====== -->
+    @yield('custom_css')
 </head>
 
 <body>
