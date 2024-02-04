@@ -12,6 +12,11 @@ class MasterController extends Controller
     {
         return view('frontend.index');
     }
+
+    public function service_buy_now($slug)
+    {
+        return view('frontend.service_buy', compact(['slug']));
+    }
     public function cryptoPay()
     {
         $PAYMENT_KEY = 'NXOeGKs5Uv7iem6i2LJE9PRmoXYeSo8KfOOw3ZdeLLQUte6xkuyFswskmBWvsMrkbzm34mwlEeeVKSFXpkSYV0Wbm9VN30UpJ5stBCNVn0W22kcaeDeBpWALOt6pWXmz';

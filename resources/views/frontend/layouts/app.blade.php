@@ -33,6 +33,58 @@
     <link href="{{ asset('our_assets/assets/css/style.css') }}" rel="stylesheet">
 
     <!-- ====Bootstrap v5.3.2====== -->
+    <style>
+        .basic_btn {
+            border: 1px solid #07d5c0;
+            color: #07d5c0;
+        }
+
+        .basic_btn:hover {
+            background: #07d5c0;
+            color: #ffffff;
+        }
+
+        .starter_btn {
+            border: 1px solid #65c600;
+            color: #65c600;
+        }
+
+        .starter_btn:hover {
+            background: #65c600;
+            color: #ffffff;
+        }
+
+        .business_btn {
+            border: 1px solid #ff901c;
+            color: #ff901c;
+        }
+
+        .business_btn:hover {
+            background: #ff901c;
+            color: #ffffff;
+        }
+
+        .ultimate_btn {
+            border: 1px solid #ff0071;
+            color: #ff0071;
+        }
+
+        .ultimate_btn:hover {
+            background: #ff0071;
+            color: #ffffff;
+        }
+
+        .hero .btn-get-started:hover {
+            margin-top: 30px;
+            line-height: 0;
+            padding: 15px 40px;
+            border-radius: 4px;
+            transition: 0.5s;
+            color: #fff;
+            background: #012970;
+            box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+        }
+    </style>
     @yield('custom_css')
 </head>
 

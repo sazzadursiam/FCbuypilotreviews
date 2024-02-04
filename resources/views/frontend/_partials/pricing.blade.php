@@ -37,14 +37,17 @@
                         </li>
 
                     </ul>
-                    <a target="_blank" class="btn-buy basic_btn"
+                    {{-- <a target="_blank" class="btn-buy basic_btn"
                         href="https://api.whatsapp.com/send?phone=919988971816&text=Hello, I'd like to place an order for: 1 TrustPilot Review.">
+                        Buy Now
+                    </a> --}}
+                    <a class="btn-buy basic_btn" href="{{ route('service_buy_now', 'basic-plan') }}">
                         Buy Now
                     </a>
                     {{-- <button class="btn-buy basic_btn" type="button" onclick="createInvoice('1')">
                         PAY
                     </button> --}}
-                    <a target="_blank" class="btn-buy basic_btn" href="{{ route('pay-by-crypto') }}">Pay</a>
+                    {{-- <a target="_blank" class="btn-buy basic_btn" href="{{ route('pay-by-crypto') }}">Pay</a> --}}
                 </div>
             </div>
 
@@ -75,10 +78,14 @@
                         </li>
 
                     </ul>
-                    <a target="_blank" class="btn-buy starter_btn"
-                        href="https://api.whatsapp.com/send?phone=919988971816&text=Hello, I'd like to place an order for: 5 TrustPilot Review.">
+
+                    <a class="btn-buy basic_btn" href="{{ route('service_buy_now', 'starter-plan') }}">
                         Buy Now
                     </a>
+                    {{-- <a target="_blank" class="btn-buy starter_btn"
+                        href="https://api.whatsapp.com/send?phone=919988971816&text=Hello, I'd like to place an order for: 5 TrustPilot Review.">
+                        Buy Now
+                    </a> --}}
                 </div>
             </div>
 
@@ -108,10 +115,13 @@
                             Permanent
                         </li>
                     </ul>
-                    <a target="_blank" class="btn-buy business_btn"
-                        href="https://api.whatsapp.com/send?phone=919988971816&text=Hello, I'd like to place an order for: 10 TrustPilot Review.">
+                    <a class="btn-buy basic_btn" href="{{ route('service_buy_now', 'business-plan') }}">
                         Buy Now
                     </a>
+                    {{-- <a target="_blank" class="btn-buy business_btn"
+                        href="https://api.whatsapp.com/send?phone=919988971816&text=Hello, I'd like to place an order for: 10 TrustPilot Review.">
+                        Buy Now
+                    </a> --}}
                 </div>
             </div>
 
@@ -141,10 +151,13 @@
                         </li>
 
                     </ul>
-                    <a target="_blank" class="btn-buy ultimate_btn"
-                        href="https://api.whatsapp.com/send?phone=919988971816&text=Hello, I'd like to place an order for: 20 TrustPilot Review.">
+                    <a class="btn-buy basic_btn" href="{{ route('service_buy_now', 'ultimate-plan') }}">
                         Buy Now
                     </a>
+                    {{-- <a target="_blank" class="btn-buy ultimate_btn"
+                        href="https://api.whatsapp.com/send?phone=919988971816&text=Hello, I'd like to place an order for: 20 TrustPilot Review.">
+                        Buy Now
+                    </a> --}}
                 </div>
             </div>
 

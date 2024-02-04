@@ -3,61 +3,38 @@
     Home
 @endsection
 @section('custom_css')
-    <style>
-        .basic_btn {
-            border: 1px solid #07d5c0;
-            color: #07d5c0;
-        }
-
-        .basic_btn:hover {
-            background: #07d5c0;
-            color: #ffffff;
-        }
-
-        .starter_btn {
-            border: 1px solid #65c600;
-            color: #65c600;
-        }
-
-        .starter_btn:hover {
-            background: #65c600;
-            color: #ffffff;
-        }
-
-        .business_btn {
-            border: 1px solid #ff901c;
-            color: #ff901c;
-        }
-
-        .business_btn:hover {
-            background: #ff901c;
-            color: #ffffff;
-        }
-
-        .ultimate_btn {
-            border: 1px solid #ff0071;
-            color: #ff0071;
-        }
-
-        .ultimate_btn:hover {
-            background: #ff0071;
-            color: #ffffff;
-        }
-
-        .hero .btn-get-started:hover {
-            margin-top: 30px;
-            line-height: 0;
-            padding: 15px 40px;
-            border-radius: 4px;
-            transition: 0.5s;
-            color: #fff;
-            background: #012970;
-            box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
-        }
-    </style>
 @endsection
 
 @section('content')
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero d-flex align-items-center">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                    <h1 data-aos="fade-up">Enhance Your Reputation: Genuine Trustpilot Reviews for Credibility and Trust!
+                    </h1>
+                    <h2 data-aos="fade-up" data-aos-delay="400">Unlock Success: Your Path to Trustworthy Reviews Starts
+                        Here!</h2>
+                    <div data-aos="fade-up" data-aos-delay="600">
+                        <div class="text-center text-lg-start">
+                            <a href="#pricing"
+                                class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                                <span>Get Started</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                    <img src="{{ asset('our_assets/assets/img/hero___1.png') }}" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section><!-- End Hero -->
+
+
     <!-- ======= About Section ======= -->
     @include('frontend._partials.about')
     <!-- End About Section -->
@@ -70,17 +47,10 @@
     @include('frontend._partials.counts')
     <!-- End Counts Section -->
 
-
-
-    <!-- ======= Services Section ======= -->
-    {{-- @include('frontend._partials.services') --}}
-    <!-- End Services Section -->
-
     <!-- ======= Contact Section ======= -->
     @include('frontend._partials.contact')
     <!-- End Contact Section -->
 @endsection
 
 @section('custom_js')
-    
 @endsection
