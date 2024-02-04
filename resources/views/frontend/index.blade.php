@@ -54,16 +54,6 @@
             background: #012970;
             box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
         }
-
-        /* .cb1:hover {
-                            background: #717ef3;
-                        }
-
-                        .cb1:hover i,
-                        .cb1:hover p,
-                        .cb1:hover span {
-                            color: #ffffff;
-                        } */
     </style>
 @endsection
 
