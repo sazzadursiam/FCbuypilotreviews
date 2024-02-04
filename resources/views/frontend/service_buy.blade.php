@@ -184,77 +184,85 @@
                                     <p class="my-3">Please complete this form before paying</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <form action="{{ route('pay-by-crypto') }}" method="POST"
+                                onsubmit="return confirm('Are you sure you want to Pay?')">
+                                @csrf
+                                <div class="row">
 
-                                <div class="col-md-4 mb-1">
-                                    <label for="customer_name">Name <span class="text-danger">*</span></label>
-                                    <input type="text" name="customer_name" id="customer_name" class="form-control"
-                                        required>
-                                </div>
-                                <div class="col-md-4 mb-1">
-                                    <label for="customer_phone">Phone <span class="text-danger">*</span></label>
-                                    <input type="text" name="customer_phone" id="customer_phone" class="form-control"
-                                        required>
-                                </div>
-                                <div class="col-md-4 mb-1">
-                                    <label for="customer_email">Email <span class="text-danger">*</span></label>
-                                    <input type="text" name="customer_email" id="customer_email" class="form-control"
-                                        required>
-                                </div>
-                                <div class="col-md-12 mb-1">
-                                    <label for="customer_message">Message</label>
-                                    <textarea name="customer_message" id="customer_message" rows="4" class="form-control" placeholder="Optional"></textarea>
-                                </div>
-                                <div class="col-md-6 mb-1">
-                                    <label for="customer_business_link">Your Business Link</label>
-                                    <input type="text" name="customer_business_link" id="customer_business_link"
-                                        class="form-control">
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <label for="package_change">Change Package</label>
-                                    <select name="" id="package_change" class="form-select">
-                                        <option value="">Choose Package</option>
-                                        <option value="basic-plan" data-price="10">Basic Plan / 1 TrustPilot Review / $ 10
-                                        </option>
-                                        <option value="starter-plan" data-price="50">Starter Plan / 5 TrustPilot Review / $
-                                            50
-                                        </option>
-                                        <option value="business-plan" data-price="100">Business Plan / 10 TrustPilot Review
-                                            / $
-                                            100
-                                        </option>
-                                        <option value="ultimate-plan" data-price="180">Ultimate Plan / 20 TrustPilot
-                                            Review
-                                            / $
-                                            180
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-6">
-                                    <h5>Total Amount: <b>$</b> <b id="package_total_price">
-                                            @if ($slug == 'basic-plan')
+                                    <div class="col-md-4 mb-1">
+                                        <label for="customer_name">Name <span class="text-danger">*</span></label>
+                                        <input type="text" name="customer_name" id="customer_name" class="form-control"
+                                            required>
+                                    </div>
+                                    <div class="col-md-4 mb-1">
+                                        <label for="customer_phone">Phone <span class="text-danger">*</span></label>
+                                        <input type="text" name="customer_phone" id="customer_phone" class="form-control"
+                                            required>
+                                    </div>
+                                    <div class="col-md-4 mb-1">
+                                        <label for="customer_email">Email <span class="text-danger">*</span></label>
+                                        <input type="email" name="customer_email" id="customer_email" class="form-control"
+                                            required>
+                                    </div>
+                                    <div class="col-md-12 mb-1">
+                                        <label for="customer_message">Message</label>
+                                        <textarea name="customer_message" id="customer_message" rows="4" class="form-control" placeholder="Optional"></textarea>
+                                    </div>
+                                    <div class="col-md-6 mb-1">
+                                        <label for="customer_business_link">Your Business Link</label>
+                                        <input type="text" name="customer_business_link" id="customer_business_link"
+                                            class="form-control">
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <label for="package_change">Change Package</label>
+                                        <select name="" id="package_change" class="form-select">
+                                            <option value="">Choose Package</option>
+                                            <option value="basic-plan" data-price="10">Basic Plan / 1 TrustPilot Review / $
                                                 10
-                                            @elseif($slug == 'starter-plan')
+                                            </option>
+                                            <option value="starter-plan" data-price="50">Starter Plan / 5 TrustPilot Review
+                                                / $
                                                 50
-                                            @elseif($slug == 'business-plan')
+                                            </option>
+                                            <option value="business-plan" data-price="100">Business Plan / 10 TrustPilot
+                                                Review
+                                                / $
                                                 100
-                                            @elseif($slug == 'ultimate-plan')
+                                            </option>
+                                            <option value="ultimate-plan" data-price="180">Ultimate Plan / 20 TrustPilot
+                                                Review
+                                                / $
                                                 180
-                                            @endif
-                                        </b></h5>
-                                    <input type="hidden" name="amount" id="amount" value="{{ $price }}">
-                                    <input type="hidden" name="category" id="category" value="{{ $category }}">
-                                    <input type="hidden" name="package_title" id="package_title"
-                                        value="{{ $package_title }}">
+                                            </option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="col-6 text-end">
-                                    <button type="button" class="btn btn-md btn-primary px-5 text-white">Pay Now</button>
-                                </div>
-                            </div>
 
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h5>Total Amount: <b>$</b> <b id="package_total_price">
+                                                @if ($slug == 'basic-plan')
+                                                    10
+                                                @elseif($slug == 'starter-plan')
+                                                    50
+                                                @elseif($slug == 'business-plan')
+                                                    100
+                                                @elseif($slug == 'ultimate-plan')
+                                                    180
+                                                @endif
+                                            </b></h5>
+                                        <input type="hidden" name="amount" id="amount" value="{{ $price }}">
+                                        <input type="hidden" name="category" id="category"
+                                            value="{{ $category }}">
+                                        <input type="hidden" name="package_title" id="package_title"
+                                            value="{{ $package_title }}">
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <button type="submit" class="btn btn-md btn-primary px-5 text-white">Pay
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
