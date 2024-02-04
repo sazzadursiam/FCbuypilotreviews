@@ -19,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [MasterController::class, 'index'])->name('home');
+Route::get('/pay-by-crypto', [MasterController::class, 'cryptoPay'])->name('pay-by-crypto');
