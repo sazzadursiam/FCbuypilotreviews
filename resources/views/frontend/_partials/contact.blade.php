@@ -23,14 +23,14 @@
                         <div class="info-box">
                             <i class="bi bi-telephone"></i>
                             <h3>Call Us</h3>
-                            <p>919988971816<br>919988971816</p>
+                            <p>+91998897116<br>+919988971816</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="info-box">
                             <i class="bi bi-envelope"></i>
                             <h3>Email Us</h3>
-                            <p>info@example.com<br>contact@example.com</p>
+                            <p>buypilotreviews@gmail.com</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">

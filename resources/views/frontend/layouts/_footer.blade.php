@@ -73,7 +73,7 @@
 
     <div class="container">
         <div class="copyright">
-            &copy; Copyright <strong><span>Company Name</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>Buy Trustpilot Reviews</span></strong>. All Rights Reserved
         </div>
     </div>
 </footer><!-- End Footer -->
