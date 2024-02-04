@@ -20,4 +20,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [MasterController::class, 'index'])->name('home');
 Route::get('/buy-service/{slug}', [MasterController::class, 'service_buy_now'])->name('service_buy_now');
-Route::get('/pay-by-crypto', [MasterController::class, 'cryptoPay'])->name('pay-by-crypto');
+Route::post('/pay-by-crypto', [MasterController::class, 'cryptoPay'])->name('pay-by-crypto');
