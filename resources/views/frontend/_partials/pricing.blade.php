@@ -12,11 +12,11 @@
             <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                 <div class="box">
                     <h3 style="color: #07d5c0;">Basic Plan</h3>
-                    <div class="price"><sup>$</sup>5</div>
+                    <div class="price"><sup>$</sup>10</div>
                     {{-- <img src="{{ asset('our_assets/assets/img/pricing-free.png') }}" class="img-fluid" alt=""> --}}
                     <h3 style="color: #07d5c0;" class="py-4 mb-0">1 TrustPilot Review</h3>
                     <ul>
-                        
+
                         <li>
                             Custom Content
                         </li>
@@ -35,11 +35,16 @@
                         <li>
                             Permanent
                         </li>
+
                     </ul>
                     <a target="_blank" class="btn-buy basic_btn"
                         href="https://api.whatsapp.com/send?phone=919988971816&text=Hello, I'd like to place an order for: 1 TrustPilot Review.">
                         Buy Now
                     </a>
+                    {{-- <button class="btn-buy basic_btn" type="button" onclick="createInvoice('1')">
+                        PAY
+                    </button> --}}
+                    <a target="_blank" class="btn-buy basic_btn" href="{{ route('pay-by-crypto') }}">Pay</a>
                 </div>
             </div>
 
@@ -81,7 +86,7 @@
                 <div class="box">
                     <span class="featured" style="background:#ff901c;">Best</span>
                     <h3 style="color: #ff901c;">Business Plan</h3>
-                    <div class="price"><sup>$</sup>90</div>
+                    <div class="price"><sup>$</sup>100</div>
                     <h3 style="color: #ff901c;" class="py-4 mb-0">10 TrustPilot Review</h3>
                     <ul>
                         <li>

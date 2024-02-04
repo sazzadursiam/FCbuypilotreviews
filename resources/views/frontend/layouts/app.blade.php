@@ -9,6 +9,7 @@
     <title>Buy Trustpilot Reviews</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <!-- Favicons -->
     <link href="{{ asset('our_assets/assets/img/favicon.png') }}" rel="icon">
@@ -54,6 +55,8 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <!-- Vendor JS Files -->
     <script src="{{ asset('our_assets/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
     <script src="{{ asset('our_assets/assets/vendor/aos/aos.js') }}"></script>
@@ -65,6 +68,7 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('our_assets/assets/js/main.js') }}"></script>
+    @yield('custom_js')
 
 </body>
 

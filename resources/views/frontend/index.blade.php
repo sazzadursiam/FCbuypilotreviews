@@ -80,3 +80,7 @@
     @include('frontend._partials.contact')
     <!-- End Contact Section -->
 @endsection
+
+@section('custom_js')
+    
+@endsection
