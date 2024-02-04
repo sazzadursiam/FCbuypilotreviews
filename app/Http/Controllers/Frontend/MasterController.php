@@ -17,8 +17,9 @@ class MasterController extends Controller
     {
         return view('frontend.service_buy', compact(['slug']));
     }
-    public function cryptoPay()
+    public function cryptoPay(Request $request)
     {
+        return $request->all();
         $PAYMENT_KEY = 'NXOeGKs5Uv7iem6i2LJE9PRmoXYeSo8KfOOw3ZdeLLQUte6xkuyFswskmBWvsMrkbzm34mwlEeeVKSFXpkSYV0Wbm9VN30UpJ5stBCNVn0W22kcaeDeBpWALOt6pWXmz';
         $MERCHANT_UUID = 'ae93ae60-38cb-4c24-8dd4-7d8e46bac12b';
         $payment = \Cryptomus\Api\Client::payment($PAYMENT_KEY, $MERCHANT_UUID);
