@@ -31,6 +31,11 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="row" id="package_section">
                         @if ($slug == 'basic-plan')
+                            @php
+                                $price = 10;
+                                $category = 'Basic Plan';
+                                $package_title = '1 TrustPilot Review';
+                            @endphp
                             <div class="col-12" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="box">
                                     <h3 style="color: #07d5c0;">Basic Plan</h3>
@@ -61,6 +66,11 @@
                                 </div>
                             </div>
                         @elseif($slug == 'starter-plan')
+                            @php
+                                $price = 50;
+                                $category = 'Starter Plan';
+                                $package_title = '5 TrustPilot Review';
+                            @endphp
                             <div class="col-12" data-aos="zoom-in" data-aos-delay="200">
                                 <div class="box">
                                     <span class="featured">Featured</span>
@@ -92,6 +102,11 @@
                                 </div>
                             </div>
                         @elseif($slug == 'business-plan')
+                            @php
+                                $price = 100;
+                                $category = 'Business Plan';
+                                $package_title = '10 TrustPilot Review';
+                            @endphp
                             <div class="col-12" data-aos="zoom-in" data-aos-delay="300">
                                 <div class="box">
                                     <span class="featured" style="background:#ff901c;">Best</span>
@@ -122,6 +137,11 @@
                                 </div>
                             </div>
                         @elseif($slug == 'ultimate-plan')
+                            @php
+                                $price = 180;
+                                $category = 'Ultimate Plan';
+                                $package_title = '20 TrustPilot Review';
+                            @endphp
                             <div class="col-12" data-aos="zoom-in" data-aos-delay="400">
                                 <div class="box">
                                     <h3 style="color: #ff0071;">Ultimate Plan</h3>
@@ -225,6 +245,10 @@
                                                 180
                                             @endif
                                         </b></h5>
+                                    <input type="hidden" name="amount" id="amount" value="{{ $price }}">
+                                    <input type="hidden" name="category" id="category" value="{{ $category }}">
+                                    <input type="hidden" name="package_title" id="package_title"
+                                        value="{{ $package_title }}">
                                 </div>
                                 <div class="col-6 text-end">
                                     <button type="button" class="btn btn-md btn-primary px-5 text-white">Pay Now</button>
@@ -234,10 +258,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
 
             </div>
 
@@ -383,17 +403,27 @@
             if (package_slug == "basic-plan") {
 
                 $("#package_section").html(basic_plan);
+                $("#amount").val(10);
+                $("#category").val("Basic Plan");
+                $("#package_title").val("1 TrustPilot Review");
 
             } else if (package_slug == "starter-plan") {
                 $("#package_section").html(starter_plan);
-
+                $("#amount").val(50);
+                $("#category").val("Starter Plan");
+                $("#package_title").val("5 TrustPilot Review");
 
             } else if (package_slug == "business-plan") {
                 $("#package_section").html(business_plan);
-
+                $("#amount").val(100);
+                $("#category").val("Business Plan");
+                $("#package_title").val("10 TrustPilot Review");
 
             } else if (package_slug == "ultimate-plan") {
                 $("#package_section").html(ultimate_plan);
+                $("#amount").val(180);
+                $("#category").val("Ultimate Plan");
+                $("#package_title").val("20 TrustPilot Review");
             }
 
 
