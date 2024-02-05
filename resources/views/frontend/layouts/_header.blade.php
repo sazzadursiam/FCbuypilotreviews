@@ -9,11 +9,12 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                <li><a class="nav-link scrollto" href="#about">About</a></li>
-                {{-- <li><a class="nav-link scrollto" href="#services">Services</a></li> --}}
-                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                <li><a class="getstarted scrollto" href="#pricing">Get Started</a></li>
+                {{-- <li><a class="nav-link scrollto active" href="/#hero">Home</a></li> --}}
+                <li><a class="nav-link scrollto active" href="{{ route('home') }}#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="{{ route('home') }}#about">About</a></li>
+                <li><a class="nav-link scrollto" href="{{ route('home') }}#contact">Contact</a></li>
+                <li><a class="getstarted nav-link scrollto text-white" href="{{ route('home') }}#pricing">Get
+                        Started</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->

@@ -5,12 +5,38 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
 
 class MasterController extends Controller
 {
     public function index()
     {
         return view('frontend.index');
+    }
+    public function thank_you_page()
+    {
+        return view('frontend.thank_you_page');
+    }
+    public function return_page()
+    {
+        return view('frontend.failed_payment');
+    }
+    public function mail_sent()
+    {
+        // $data['to_email'] = $customer_email;
+        // $data['subject'] = "Order status";
+        // $data['userName'] = $customer_name;
+
+        $data['to_email'] = "marufmuzahidul@gmail.com";
+        $data['subject'] = "Payment Successful.";
+        $data['userName'] = "Maruf";
+
+
+        Mail::send('emails.payment_success_mail', $data, function ($message) use ($data) {
+            $message->to($data["to_email"])
+                ->subject($data["subject"]);
+        });
+        return back();
     }
 
     public function service_buy_now($slug)
