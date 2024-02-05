@@ -19,8 +19,8 @@ class MasterController extends Controller
         $order_id = Session::get('order_id');
         $request_all = Session::get('request_all');
 
-        $PAYMENT_KEY = 'NXOeGKs5Uv7iem6i2LJE9PRmoXYeSo8KfOOw3ZdeLLQUte6xkuyFswskmBWvsMrkbzm34mwlEeeVKSFXpkSYV0Wbm9VN30UpJ5stBCNVn0W22kcaeDeBpWALOt6pWXmz';
-        $MERCHANT_UUID = 'ae93ae60-38cb-4c24-8dd4-7d8e46bac12b';
+        $PAYMENT_KEY = 'kXdv66k906eCyJaTjKbiL3sb3ciwwaVFL4r9MOqSC9qHvmqsnK6cxEskFm0mnjYdVxOlZ3X5Ta7wYsuEjTspzCP6V5bhg1UuhtwX97hc6Pui4uotKy7B6czEctO4bTGL';
+        $MERCHANT_UUID = '41fb798a-1057-44f8-a388-4105ee75b4a8';
         $payment = \Cryptomus\Api\Client::payment($PAYMENT_KEY, $MERCHANT_UUID);
 
         $data = ["order_id" => Session::get('order_id')];
@@ -43,8 +43,14 @@ class MasterController extends Controller
                     ->subject($data["subject"]);
             });
 
+            Mail::send('emails.admin_order_notification_email', $data, function ($message) use ($data) {
+                $message->to("tarungoyal7321@gmail.com")
+                    ->subject("New Order Payment Paid in Buy TrustPilot Reviews");
+            });
+            // Session::flash();
             return view('frontend.thank_you_page', compact(['order_id', 'request_all']));
         } else {
+            // Session::flash();
             return redirect()->route('return_page');
         }
     }
@@ -77,8 +83,8 @@ class MasterController extends Controller
     public function cryptoPay(Request $request)
     {
         // return $request->all();
-        $PAYMENT_KEY = 'NXOeGKs5Uv7iem6i2LJE9PRmoXYeSo8KfOOw3ZdeLLQUte6xkuyFswskmBWvsMrkbzm34mwlEeeVKSFXpkSYV0Wbm9VN30UpJ5stBCNVn0W22kcaeDeBpWALOt6pWXmz';
-        $MERCHANT_UUID = 'ae93ae60-38cb-4c24-8dd4-7d8e46bac12b';
+        $PAYMENT_KEY = 'kXdv66k906eCyJaTjKbiL3sb3ciwwaVFL4r9MOqSC9qHvmqsnK6cxEskFm0mnjYdVxOlZ3X5Ta7wYsuEjTspzCP6V5bhg1UuhtwX97hc6Pui4uotKy7B6czEctO4bTGL';
+        $MERCHANT_UUID = '41fb798a-1057-44f8-a388-4105ee75b4a8';
         $payment = \Cryptomus\Api\Client::payment($PAYMENT_KEY, $MERCHANT_UUID);
         $data = [
 
@@ -113,10 +119,9 @@ class MasterController extends Controller
         //     "order_id" => Session::get('order_id'),
         //     "request_all" => Session::get('request_all')
         // ]);
-        $data = ["order_id" => Session::get('order_id')];
 
-
-        $succ = $payment->info($data);
-        return $succ;
+        // $data = ["order_id" => Session::get('order_id')];
+        // $succ = $payment->info($data);
+        // return $succ;
     }
 }
