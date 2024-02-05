@@ -176,7 +176,7 @@
                 </div>
 
                 <div class="col-lg-9 col-md-6">
-                    <div class="row">
+                    <div class="row" style="padding: 0 15px;">
                         <div class="col-12 pb-5" data-aos="zoom-in" data-aos-delay="100"
                             style="box-shadow:0px 0 5px rgba(1, 41, 112, 0.08); border-radius:5px;">
                             <div class="row">
@@ -220,7 +220,8 @@
                                             <option value="basic-plan" data-price="10">Basic Plan / 1 TrustPilot Review / $
                                                 10
                                             </option>
-                                            <option value="starter-plan" data-price="50">Starter Plan / 5 TrustPilot Review
+                                            <option value="starter-plan" data-price="50">Starter Plan / 5 TrustPilot
+                                                Review
                                                 / $
                                                 50
                                             </option>
