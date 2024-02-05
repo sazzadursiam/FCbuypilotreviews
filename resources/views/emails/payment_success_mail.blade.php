@@ -42,11 +42,11 @@
 <body>
     <h1>Hello <b>{{ $userName }}</b>,</h1>
     <p>Your payment is successful.</p>
-    <p>Order ID: abc0123</p>
-    <p>Package Title: 1 TrustPilot Review</p>
-    <p>Package Category: Starter Plan</p>
-    <p>Package Price: $ 10 </p>
-    <p>Paid Amount: $ 10</p>
+    <p>Order ID: {{ $orderId }}</p>
+    <p>Package Title: {{ $packageTitle }}</p>
+    <p>Package Category: {{ $category }}</p>
+    <p>Package Price: $ {{ $price }} </p>
+    <p>Paid Amount: $ {{ $price }}</p>
     <br>
     <br>
     <hr>
