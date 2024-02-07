@@ -16,44 +16,54 @@ class MasterController extends Controller
     }
     public function thank_you_page()
     {
-        $order_id = Session::get('order_id');
-        $request_all = Session::get('request_all');
-
-        $PAYMENT_KEY = 'kXdv66k906eCyJaTjKbiL3sb3ciwwaVFL4r9MOqSC9qHvmqsnK6cxEskFm0mnjYdVxOlZ3X5Ta7wYsuEjTspzCP6V5bhg1UuhtwX97hc6Pui4uotKy7B6czEctO4bTGL';
-        $MERCHANT_UUID = '41fb798a-1057-44f8-a388-4105ee75b4a8';
-        $payment = \Cryptomus\Api\Client::payment($PAYMENT_KEY, $MERCHANT_UUID);
-
-        $data = ["order_id" => Session::get('order_id')];
+        if (Session::has('order_id')) {
 
 
-        $succ = $payment->info($data);
-        // return $succ;
-        if ($succ['payment_status'] == "paid" && $succ['is_final'] == true) {
-            $data['to_email'] = $request_all['customer_email'];
-            $data['subject'] = "Payment Successful.";
-            $data['userName'] = $request_all['customer_name'];
-            $data['orderId'] = $order_id;
-            $data['packageTitle'] = $request_all['package_title'];
-            $data['category'] = $request_all['category'];
-            $data['price'] = $request_all['amount'];
-            $data['customer_message'] = $request_all['customer_message'];
-            $data['customer_business_link'] = $request_all['customer_business_link'];
+
+            $order_id = Session::get('order_id');
+            $request_all = Session::get('request_all');
+
+            $PAYMENT_KEY = 'kXdv66k906eCyJaTjKbiL3sb3ciwwaVFL4r9MOqSC9qHvmqsnK6cxEskFm0mnjYdVxOlZ3X5Ta7wYsuEjTspzCP6V5bhg1UuhtwX97hc6Pui4uotKy7B6czEctO4bTGL';
+            $MERCHANT_UUID = '41fb798a-1057-44f8-a388-4105ee75b4a8';
+            $payment = \Cryptomus\Api\Client::payment($PAYMENT_KEY, $MERCHANT_UUID);
+
+            $data = ["order_id" => Session::get('order_id')];
+
+            Session::flash();
+            // Session::forget('order_id');
+            // Session::forget('request_all');
+
+            $succ = $payment->info($data);
+            // return $succ;
+            if ($succ['payment_status'] == "paid" && $succ['is_final'] == true) {
+                $data['to_email'] = $request_all['customer_email'];
+                $data['subject'] = "Payment Successful.";
+                $data['userName'] = $request_all['customer_name'];
+                $data['orderId'] = $order_id;
+                $data['packageTitle'] = $request_all['package_title'];
+                $data['category'] = $request_all['category'];
+                $data['price'] = $request_all['amount'];
+                $data['customer_message'] = $request_all['customer_message'];
+                $data['customer_business_link'] = $request_all['customer_business_link'];
 
 
-            Mail::send('emails.payment_success_mail', $data, function ($message) use ($data) {
-                $message->to($data["to_email"])
-                    ->subject($data["subject"]);
-            });
+                Mail::send('emails.payment_success_mail', $data, function ($message) use ($data) {
+                    $message->to($data["to_email"])
+                        ->subject($data["subject"]);
+                });
 
-            Mail::send('emails.admin_order_notification_email', $data, function ($message) use ($data) {
-                $message->to("tarungoyal7321@gmail.com")
-                    ->subject("New Order Payment Paid in Buy TrustPilot Reviews");
-            });
-            // Session::flash();
-            return view('frontend.thank_you_page', compact(['order_id', 'request_all']));
+                Mail::send('emails.admin_order_notification_email', $data, function ($message) use ($data) {
+                    $message->to("tarungoyal7321@gmail.com")
+                        ->subject("New Order Payment Paid in Buy TrustPilot Reviews");
+                });
+                // Session::flash();
+                return view('frontend.thank_you_page', compact(['order_id', 'request_all']));
+            } else {
+                // Session::flash();
+                return redirect()->route('return_page');
+            }
         } else {
-            // Session::flash();
-            return redirect()->route('return_page');
+            return redirect()->route('home');
         }
     }
     public function return_page()
