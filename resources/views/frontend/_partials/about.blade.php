@@ -9,7 +9,7 @@
                     <h2>Your Trusted Partner in Building Reputable Online Presences. Experience, Integrity, Excellence
                     </h2>
                     <p>
-                        Welcome to <b>Your Company Name</b>, where we specialize in delivering authentic Trustpilot
+                        Welcome to <b>Techie</b>, where we specialize in delivering authentic Trustpilot
                         review
                         services. With a commitment to integrity and years of expertise, we're your dedicated partner in
                         enhancing online credibility. Explore a journey with us that combines experience,

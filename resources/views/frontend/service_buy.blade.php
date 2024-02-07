@@ -178,7 +178,7 @@
                 <div class="col-lg-9 col-md-6">
                     <div class="row" style="padding: 0 15px;">
                         <div class="col-12 pb-5" data-aos="zoom-in" data-aos-delay="100"
-                            style="box-shadow:0px 0 5px rgba(1, 41, 112, 0.08); border-radius:5px;">
+                            style="box-shadow:0px 0 5px rgba(1, 41, 112, 0.08); border-radius:5px; background-color: #f6f9ff">
                             <div class="row">
                                 <div class="col-12">
                                     <p class="my-3">Please complete this form before paying</p>
@@ -211,7 +211,7 @@
                                     <div class="col-md-6 mb-1">
                                         <label for="customer_business_link">Your Business Link</label>
                                         <input type="text" name="customer_business_link" id="customer_business_link"
-                                            class="form-control">
+                                            class="form-control" placeholder="www.yourwebsite.com">
                                     </div>
                                     <div class="col-md-6 mb-4">
                                         <label for="package_change">Change Package</label>
