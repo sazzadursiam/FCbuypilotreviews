@@ -36,6 +36,8 @@ class MasterController extends Controller
             $data['packageTitle'] = $request_all['package_title'];
             $data['category'] = $request_all['category'];
             $data['price'] = $request_all['amount'];
+            $data['customer_message'] = $request_all['customer_message'];
+            $data['customer_business_link'] = $request_all['customer_business_link'];
 
 
             Mail::send('emails.payment_success_mail', $data, function ($message) use ($data) {
@@ -94,9 +96,9 @@ class MasterController extends Controller
 
             'order_id' => Str::uuid(),
 
-            'url_return' => 'https://chandigarhppcexpert.com/demo/callback',
+            'url_return' => 'https://buytrustpilotreviews.website/callback',
 
-            'url_callback' => 'https://chandigarhppcexpert.com/demo/callback',
+            'url_callback' => 'https://buytrustpilotreviews.website/callback',
 
             'is_payment_multiple' => false,
 

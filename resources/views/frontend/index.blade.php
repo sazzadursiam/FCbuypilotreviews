@@ -6,6 +6,10 @@
 @endsection
 
 @section('content')
+    <!-- ======= Pricing Section ======= -->
+    @include('frontend._partials.pricing')
+    <!-- End Pricing Section -->
+
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero d-flex align-items-center">
 
@@ -35,13 +39,13 @@
     </section><!-- End Hero -->
 
 
+
+
     <!-- ======= About Section ======= -->
     @include('frontend._partials.about')
     <!-- End About Section -->
 
-    <!-- ======= Pricing Section ======= -->
-    @include('frontend._partials.pricing')
-    <!-- End Pricing Section -->
+
 
     <!-- ======= Counts Section ======= -->
     @include('frontend._partials.counts')
