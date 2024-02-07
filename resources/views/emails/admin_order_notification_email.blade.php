@@ -47,6 +47,8 @@
     <p>Package Category: {{ $category }}</p>
     <p>Package Price: $ {{ $price }} </p>
     <p>Paid Amount: $ {{ $price }}</p>
+    <p>Business Link : {{ $customer_business_link }}</p>
+    <p>Message : {{ $customer_message }}</p>
     <br>
     <br>
     <hr>
